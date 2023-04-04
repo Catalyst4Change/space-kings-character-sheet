@@ -1,0 +1,103 @@
+#char-health {
+  width: 100%;
+  height: 100%;
+  .section-title {
+    text-align: center;
+  }
+
+  #health-display {
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    #max-health {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      font-size: 1.9em;
+      font-weight: bold;
+    }
+
+    #health-total {
+      position: relative;
+      .health-total-background {
+        height: 40px;
+        width: 40px;
+      }
+      span {
+        font-size: 2em;
+        position: absolute;
+        padding: 0% 20%;
+        font-weight: bold;
+      }
+    }
+
+    .health-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: left;
+      z-index: 2;
+      align-items: flex-end;
+      .health-bar-dot {
+        height: 21px;
+        width: 21px;
+      }
+    }
+
+    .health-bar-background {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      padding-left: 13.25%;
+
+      .health-bar-background-dot {
+        filter: grayscale(1);
+        height: 21px;
+        width: 21px;
+      }
+    }
+  }
+
+  #health-condition {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .health-stepper {
+      height: 40px;
+      width: 40px;
+      &:hover {
+        scale: 110%;
+      }
+    }
+  }
+}
+.red {
+  color: red;
+}
+
+.yellow {
+  color: orange;
+}
+
+.green {
+  color: limegreen;
+}
+
+.purple {
+  color: purple;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: limegreen;
+}

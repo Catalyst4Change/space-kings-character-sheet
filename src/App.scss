@@ -1,0 +1,264 @@
+// @font-face {
+//   font-family: "custom";
+//   src: url(./Assets/Fonts/Rocket.ttf) format("truetype");
+// }
+
+$primary-color: rgb(128, 255, 0);
+$secondary-color: rgb(0, 89, 255);
+
+// tags //
+
+a {
+  color: magenta;
+  &:visited {
+    color: darkorchid;
+  }
+}
+
+h3 {
+  margin: 0;
+}
+
+option {
+  font-size: 2em;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+// global attributes //
+
+.border {
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+#App {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+
+  font-size: 16px;
+  letter-spacing: normal;
+
+  #navbar {
+    color: white;
+    margin: 10px 5px 10px 10px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+
+    .creator-credit {
+      margin-top: 20px;
+    }
+
+    .catalyst {
+      font-family: custom;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+  }
+
+  #cards-section {
+    max-width: 85vw;
+  }
+}
+
+.card-options {
+  padding-top: 5px;
+}
+
+.display-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.invert-colors {
+  filter: invert(1);
+}
+
+.form-stepper {
+  all: unset;
+  img {
+    pointer-events: none;
+  }
+}
+
+.form-attribute-stepper {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  .form-stepper {
+    &:hover {
+      scale: 110%;
+    }
+  }
+}
+
+.form-button {
+  margin: 10px;
+}
+
+.form-input {
+  width: 80%;
+  margin: 10px;
+  border: 1px black solid;
+}
+
+.form-select {
+  margin: 10px;
+}
+
+.option-button {
+  all: unset;
+  min-width: 100px;
+  padding: 1%;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 5px;
+  background-color: white;
+  border: 1px black solid;
+  text-align: center;
+
+  &.primary {
+    color: white;
+    border: 1px $primary-color solid;
+    background-color: rgba($primary-color, 0.5);
+    transition: background-color 0.25s ease-in-out;
+    &:hover {
+      background-color: rgba(red, 0.5);
+      transition: background-color 0.25s ease-in-out;
+    }
+  }
+
+  &.secondary {
+    color: white;
+    border: 1px $secondary-color solid;
+    background-color: rgba($secondary-color, 0.5);
+    transition: background-color 0.25s ease-in-out;
+    &:hover {
+      background-color: rgba(red, 0.5);
+      transition: background-color 0.25s ease-in-out;
+    }
+  }
+
+  &.positive {
+    border: 1px black solid;
+    background-color: green;
+    color: white;
+  }
+
+  &.neutral {
+    border: 1px black solid;
+    background-color: lightgrey;
+    color: black;
+  }
+
+  &.negative {
+    border: 1px black solid;
+    background-color: firebrick;
+    color: white;
+  }
+
+  &.sidebar {
+    width: 95%;
+  }
+}
+
+.stepper-button {
+  all: unset;
+  &:hover {
+    scale: 110%;
+  }
+  img {
+    pointer-events: none;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px rgba(175, 175, 175, 0.75) dotted;
+
+  .tooltip-text {
+    position: absolute;
+    width: 200px;
+    top: -25px;
+    left: 120%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10 !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ease-out, opacity 0.5s ease-out;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 35px;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent black transparent transparent;
+
+      opacity: 1;
+      transition: visibility 0.5s ease-out, opacity 0.5s ease-out;
+    }
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.5s ease-in, opacity 0.5s ease-in;
+  }
+}
