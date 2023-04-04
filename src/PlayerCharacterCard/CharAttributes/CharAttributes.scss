@@ -1,0 +1,28 @@
+.char-attributes {
+  height: auto;
+}
+
+.section-title {
+  margin: 0 auto;
+}
+
+.attributes-grid {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+
+  .grid-item {
+    padding-left: 10%;
+    flex-direction: row;
+    justify-content: baseline;
+    text-align: left;
+  }
+
+  .attribute-symbol {
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 0.2em;
+  }
+}

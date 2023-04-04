@@ -66,41 +66,18 @@ p {
 }
 
 #App {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif");
+  background-color: rgba($primary-color, 0.5);
+  // background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
 
-  display: flex;
-  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 
   font-size: 16px;
   letter-spacing: normal;
-
-  #navbar {
-    color: white;
-    margin: 10px 5px 10px 10px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-
-    .creator-credit {
-      margin-top: 20px;
-    }
-
-    .catalyst {
-      font-family: custom;
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-  }
-
-  #cards-section {
-    max-width: 85vw;
-  }
 }
 
 .card-options {

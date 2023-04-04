@@ -1,0 +1,29 @@
+.char-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+
+  .badge {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stat-icon {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.2em;
+  }
+
+  .crit {
+    filter: invert(1);
+    height: 1.6em;
+    width: 1.6em;
+    margin-right: -1px;
+    transform: translateY(-1px);
+  }
+}

@@ -83,11 +83,11 @@ function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem("character", JSON.stringify(character));
+    localStorage.setItem("characters", JSON.stringify(character));
   }, [character]);
 
   return (
-    <div className="App">
+    <div id="App">
       <PlayerCharacterCard character={character} setCharacter={setCharacter} />
     </div>
   );

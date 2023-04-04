@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["chev"]
+  "cSpell.words": ["chev"],
+  "prettier.trailingComma": "es5"
 }

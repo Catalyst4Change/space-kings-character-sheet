@@ -69,7 +69,6 @@ export const CharHealth = ({
 
   useEffect(() => {
     const healthDifferential = Math.abs(maxHealth - currentHealth);
-    console.log("healthDifferential", healthDifferential);
     if (healthDifferential) {
       const reducedHealth = () => {
         return healthBar.slice(0, -healthDifferential);
@@ -115,8 +114,8 @@ export const CharHealth = ({
       let healthBarCopy = healthBar;
       healthBarCopy.push(healthDot());
       setHealthBar(healthBarCopy);
-
-      if (currentHealth >= 0) {
+      console.log("up");
+      if (currentHealth < maxHealth) {
         const updatedCharacter = {
           ...character,
           currentHealth: (currentHealth += 1),
